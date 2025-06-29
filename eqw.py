@@ -2,9 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load data
-data = np.loadtxt('observed_spectrum2.txt')
+data = np.loadtxt('observed_spectrum1.txt')
 wavelength = data[:, 0]
 flux = data[:, 1]
+print('min wavelength=', min(wavelength), 'max wavelength= ', max(wavelength))
+plt.plot(wavelength, flux)
+plt.show()
+
 
 # Ask for user input for initial plotting
 central_wavelength = float(input("Enter central wavelength (e.g., 5168.42): "))
